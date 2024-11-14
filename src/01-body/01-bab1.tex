@@ -73,6 +73,7 @@
 
 \begin{table}[h!]
     \centering
+    \caption{Project Sponsor}
     \begin{tabular}{|l|l|}
         \hline
         \textbf{Nama} & Haykal Rasidi \\ \hline
@@ -91,33 +92,43 @@ Permasalahan lain, faktor human error akan semakin besar dalam melakukan konfigu
 
 Oleh karena itu perlu adanya system yang mampu menyederhanakan proses tersebut agar menjadi efektif dan lebih efisien. 
 
-\begin{tabular}{|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
-\hline
-\textbf{Harapan} & \textbf{Kenyataan} & \textbf{Masalah} \\
-\hline
-Tidak memerlukan sumber daya manusia yang terlalu banyak dalam melakukan konfigurasi ke banyak perangkat. & Saat ini dalam melakukan konfigurasi ke banyak perangkat diperlukan beberapa sumber daya manusia. & Diperlukan suatu sistem informasi yang mampu mengintegrasikan seluruh perangkat dalam satu dashboard dalam melakukan konfigurasi perintah/command secara bersamaan dalam satu waktu. \\
-\hline
-Tidak memerlukan waktu yang terlalu lama dalam melakukan banyak proses ke banyak perangkat. & Saat ini waktu yang dibutuhkan akan bertambah jika perangkat dan konfigurasi yang dilakukan semakin banyak. & \\
-\hline
-Mengurangi human error dalam melakukan konfigurasi yang panjang ke banyak perangkat dalam waktu yang singkat. & Sering terjadi kesalahan dalam melakukan konfigurasi perintah/command atau ada step yang terlewat. & \\
-\hline
-Sistem yang mengintegrasikan banyak perangkat dalam satu dashboard untuk memudahkan dalam manajemen konfigurasi. & Belum ada sistem yang mengintegrasikan, saat ini dalam melakukan konfigurasi dilakukan satu persatu dengan membuka akses terhadap tiap perangkat. & \\
-\hline
-\end{tabular}
 
+\newpage 
 
-% insert gambar network automation
+\begin{table}[h!]
+    \caption{Harapan, Kenyataan, Masalah}
+    \begin{longtable}{|p{4cm}|p{4cm}|>{\raggedright\arraybackslash}p{3.5cm}|}
+        \hline
+        \textbf{Harapan} & \textbf{Kenyataan} & \textbf{Masalah} \\
+        \hline
+        Tidak memerlukan sumber daya manusia yang terlalu banyak dalam melakukan konfigurasi ke banyak perangkat. &
+        Saat ini dalam melakukan konfigurasi ke banyak perangkat diperlukan beberapa sumber daya manusia. &
+        \multirow{4}{\linewidth}{%
+            \raggedright
+            Diperlukan suatu sistem informasi yang mampu mengintegrasikan seluruh perangkat dalam satu dashboard untuk melakukan konfigurasi perintah/command secara bersamaan dalam satu waktu.
+        } \\
+        \cline{1-2}
+        Tidak memerlukan waktu yang terlalu lama dalam melakukan banyak proses ke banyak perangkat. &
+        Saat ini waktu yang dibutuhkan akan bertambah jika perangkat dan konfigurasi yang dilakukan semakin banyak. & \\
+        \cline{1-2}
+        Mengurangi human error dalam melakukan konfigurasi yang panjang ke banyak perangkat dalam waktu yang singkat. &
+        Sering terjadi kesalahan dalam melakukan konfigurasi perintah/command atau ada step yang terlewat. & \\
+        \cline{1-2}
+        Sistem yang mengintegrasikan banyak perangkat dalam satu dashboard untuk memudahkan dalam manajemen konfigurasi. &
+        Belum ada sistem yang mengintegrasikan, saat ini dalam melakukan konfigurasi dilakukan satu persatu dengan membuka akses terhadap tiap perangkat. & \\
+        \hline
+    \end{longtable}
+\end{table}
+
+Network Automation menjadi sebuah solusi atas beberapa permasalahan tersebut, mulai dari biaya yang tinggi untuk hire beberapa sumber daya untuk melakukan pekerjaan tersebut, menyederhanakan sebuah proses yang kompleks dan panjang hingga menghindari banyaknya kesalahan dalam melakukan konfigurasi. Network automation sebuah solusi yang diimplementasikan dalam bentuk sistem yang akan menunjang suatu proses bisnis perusahaan dari sisi IT infrastruktur.
 
 \begin{figure}
 	\centering
-	\includegraphics[width=0.70\textwidth]
-		{assets/pics/Network Automation.png}
+	\includegraphics[width=0.70\textwidth]{assets/pics/network_automation.png}
 	\caption{Network Automation}
 	\label{fig:NetworkAutomation}
 \end{figure}
 
-
-Network Automation menjadi sebuah solusi atas beberapa permasalahan tersebut, mulai dari biaya yang tinggi untuk hire beberapa sumber daya untuk melakukan pekerjaan tersebut, menyederhanakan sebuah proses yang kompleks dan panjang hingga menghindari banyaknya kesalahan dalam melakukan konfigurasi. Network automation sebuah solusi yang diimplementasikan dalam bentuk sistem yang akan menunjang suatu proses bisnis perusahaan dari sisi IT infrastruktur.
 
 \subsection{Non-Functional Requirements (NFR)}
 \begin{enumerate}
