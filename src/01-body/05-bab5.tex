@@ -1,78 +1,247 @@
 %-----------------------------------------------------------------------------%
 \chapter{\babLima}
 %-----------------------------------------------------------------------------%
-\todo{Tambahkan kata-kata pengantar bab 5 disini.}
+% \todo{Tambahkan kata-kata pengantar bab 5 disini.}
 
 
-%-----------------------------------------------------------------------------%
-\section{Mengubah Tampilan Teks}
-%-----------------------------------------------------------------------------%
-Beberapa perintah yang dapat digunakan untuk mengubah tampilan adalah: 
+% %-----------------------------------------------------------------------------%
+% \section{Mengubah Tampilan Teks}
+% %-----------------------------------------------------------------------------%
+% Beberapa perintah yang dapat digunakan untuk mengubah tampilan adalah: 
+% \begin{itemize}
+% 	\item \bslash f \\
+% 		Merupakan alias untuk perintah \bslash textit, contoh 
+% 		\f{contoh hasil tulisan}.
+% 	\item \bslash bi \\
+% 		\bi{Contoh hasil tulisan}.
+% 	\item \bslash bo \\
+% 		\bo{Contoh hasil tulisan}.
+% 	\item \bslash m \\
+% 		Contoh\ hasil\ tulisan: $\alpha \not= \m{\alpha}$
+% 	\item \bslash code \\ 
+% 		\code{Contoh hasil tulisan}.
+% \end{itemize}
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Memberikan Catatan}
+% %-----------------------------------------------------------------------------%
+% Ada dua perintah untuk memberikan catatan penulisan dalam dokumen yang Anda 
+% kerjakan, yaitu: 
+% \begin{itemize}
+% 	\item \bslash todo \\
+% 		Contoh: \\ \todo{Contoh bentuk todo.}
+% 	\item \bslash todoCite \\ 
+% 		Contoh: \todoCite
+% \end{itemize}
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Menambah Isi Daftar Isi}
+% %-----------------------------------------------------------------------------%
+% Terkadang ada kebutuhan untuk memasukan kata-kata tertentu kedalam Daftar Isi. 
+% Perintah \bslash addChapter dapat digunakan untuk judul bab dalam Daftar isi. 
+% Contohnya dapat dilihat pada berkas thesis.tex.
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Memasukan PDF}
+% %-----------------------------------------------------------------------------%
+% Untuk memasukan PDF dapat menggunakan perintah \bslash inpdf yang menerima satu 
+% buah argumen. Argumen ini berisi nama berkas yang akan digabungkan dalam 
+% laporan. PDF yang dimasukan degnan cara ini akan memiliki header dan footer 
+% seperti pada halaman lainnya. 
+
+% \inpdf{assets/pdfs/include}
+
+% Cara lain untuk memasukan PDF adalah dengan menggunakan perintah \bslash putpdf 
+% dengan satu argumen yang berisi nama berkas pdf. Berbeda dengan perintah 
+% sebelumnya, PDF yang dimasukan dengan cara ini tidak akan memiliki footer atau 
+% header seperti pada halaman lainnya. 
+
+% \putpdf{assets/pdfs/include}
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Membuat Perintah Baru}
+% %-----------------------------------------------------------------------------%
+% Ada dua perintah yang dapat digunakan untuk membuat perintah baru, yaitu: 
+% \begin{itemize}
+% 	\item \bslash Var \\
+% 		Digunakan untuk membuat perintah baru, namun setiap kata yang diberikan
+% 		akan diproses dahulu menjadi huruf kapital. 
+% 		Contoh jika perintahnya adalah \bslash Var\{adalah\} makan ketika 
+% 		perintah \bslash Var dipanggil, yang akan muncul adalah ADALAH. 
+% 	\item \bslash var \\
+% 		Digunakan untuk membuat perintah atau baru. 
+% \end{itemize}
+
+\section{Kondisi "As-Is"}
+
+\todo{kondisi as is dibuat sebagai activity diagram}
+\todo{hanya perlu ngelist satu apakah ini BPI BRR etc. Analysis cukup satu}
+\todo{kondisi to be dibuat sebagai activity diagram}
+
+Kondisi "as-is" menggambarkan bagaimana proses bisnis berjalan saat ini di PT. XYZ. Beberapa elemen penting dari kondisi ini meliputi manualitas, risiko tinggi terhadap kesalahan, waktu yang tidak efisien, dan kolaborasi antar tim yang kurang efektif. Berikut adalah detailnya:
+
+\subsection{Proses Konfigurasi Jaringan Manual}
+
 \begin{itemize}
-	\item \bslash f \\
-		Merupakan alias untuk perintah \bslash textit, contoh 
-		\f{contoh hasil tulisan}.
-	\item \bslash bi \\
-		\bi{Contoh hasil tulisan}.
-	\item \bslash bo \\
-		\bo{Contoh hasil tulisan}.
-	\item \bslash m \\
-		Contoh\ hasil\ tulisan: $\alpha \not= \m{\alpha}$
-	\item \bslash code \\ 
-		\code{Contoh hasil tulisan}.
+    \item \textbf{As-Is:} Saat ini, proses konfigurasi jaringan di PT. XYZ dilakukan secara manual, di mana setiap perangkat harus dikonfigurasi satu per satu oleh tim jaringan. Ini memerlukan waktu yang sangat lama, terutama ketika banyak perangkat perlu dikonfigurasi, dan meningkatkan risiko kesalahan manusia. Kompleksitas jaringan juga menyebabkan beberapa langkah konfigurasi sering terlewat atau tidak dijalankan dengan benar, yang dapat menyebabkan gangguan pada jaringan.
+
+    \item \textbf{To-Be (BPI):} Melalui pendekatan BPI, PT. XYZ dapat meningkatkan proses konfigurasi dengan menyusun dan mendokumentasikan prosedur standar operasional (SOP) yang lebih jelas dan efisien. Tim dapat menggunakan skrip setengah otomatis yang membantu mengurangi langkah manual dan meningkatkan konsistensi. Selain itu, penggunaan alat manajemen konfigurasi sederhana seperti template konfigurasi akan mempercepat proses tanpa harus mengubah infrastruktur besar.
+\end{itemize}
+
+\subsection{Monitoring Jaringan yang Dilakukan Secara Manual}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Proses monitoring jaringan saat ini dilakukan secara manual oleh tim jaringan dua kali sehari. Setiap perangkat harus diperiksa satu per satu, yang memakan waktu dan tenaga kerja. Jika ada masalah pada perangkat, sering kali deteksinya terlambat karena proses monitoring tidak dilakukan secara real-time. Tim sering kali baru bertindak setelah masalah sudah terjadi.
+
+    \item \textbf{To-Be (BPI):} Dengan BPI, PT. XYZ dapat meningkatkan proses monitoring dengan mengimplementasikan checklist otomatis sederhana, di mana monitoring dijadwalkan secara lebih terstruktur dan diintegrasikan dengan laporan otomatis. Laporan harian yang dihasilkan oleh sistem sederhana akan mempercepat identifikasi masalah. Tim juga dapat dilatih untuk menggunakan alat monitoring yang lebih terjangkau untuk meningkatkan kecepatan deteksi.
+\end{itemize}
+
+\subsection{Troubleshooting Manual}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Troubleshooting saat ini dilakukan setelah masalah terdeteksi, yang berarti tindakan yang diambil oleh tim jaringan bersifat reaktif. Ketika masalah muncul, tim harus mengidentifikasi masalah satu per satu, yang memakan waktu dan menambah downtime.
+
+    \item \textbf{To-Be (BPI):} Dengan BPI, tim jaringan dapat meningkatkan prosedur troubleshooting dengan mengimplementasikan panduan troubleshooting standar. Setiap tim akan memiliki daftar pemeriksaan (checklist) langkah-langkah awal yang harus dilakukan begitu masalah terdeteksi, sehingga mempercepat identifikasi masalah. Selain itu, PT. XYZ dapat membuat laporan troubleshooting otomatis yang dapat membantu menganalisa dan mempelajari masalah sebelumnya, guna mencegah pengulangan.
+\end{itemize}
+
+\subsection{Risiko Human Error}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Karena banyaknya tugas manual yang dilakukan oleh tim jaringan, risiko human error sangat tinggi. Kesalahan kecil dalam konfigurasi atau monitoring dapat menyebabkan kegagalan yang lebih besar di jaringan.
+
+    \item \textbf{To-Be (BPI):} Dengan BPI, risiko human error dapat dikurangi dengan menerapkan langkah-langkah verifikasi di setiap proses penting. Setiap konfigurasi atau perubahan jaringan harus melalui pemeriksaan ganda (double-check) oleh anggota tim lainnya atau dengan menggunakan checklist otomatis yang memastikan langkah-langkah penting tidak terlewatkan. Ini mengurangi risiko kesalahan yang disebabkan oleh kelalaian manusia.
+\end{itemize}
+
+\section{Kolaborasi Antar Tim}
+
+\subsection{Silo dalam Kolaborasi Antar Tim}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Kolaborasi antara tim jaringan dan tim lain, seperti tim aplikasi, saat ini sering kali tidak efisien. Perubahan dinamis pada aplikasi membutuhkan penyesuaian konfigurasi jaringan, namun tim jaringan harus melakukan perubahan tersebut secara manual, yang memperlambat alur kerja.
+
+    \item \textbf{To-Be (BPI):} Pendekatan BPI memungkinkan perbaikan kolaborasi antar tim dengan menyederhanakan alur kerja. PT. XYZ dapat mengembangkan protokol komunikasi yang lebih terstruktur antara tim jaringan dan tim aplikasi untuk memastikan setiap perubahan aplikasi yang mempengaruhi jaringan diberitahukan sebelumnya. Dengan membuat standar kerja yang lebih jelas, kolaborasi antar tim akan menjadi lebih efisien.
+\end{itemize}
+
+\section{Pengawasan dan Keamanan}
+
+\subsection{Kurangnya Pengawasan Otomatis}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Saat ini, pencatatan perubahan konfigurasi jaringan dilakukan secara manual, yang membuat proses audit sulit dan kurang efisien. Pengawasan terhadap perubahan yang dilakukan di jaringan tidak selalu bisa diandalkan, dan tim sering kali baru menyadari adanya kesalahan setelah terjadi masalah.
+
+    \item \textbf{To-Be (BPI):} Dalam sistem BPI, PT. XYZ dapat meningkatkan pengawasan dan audit dengan memperkenalkan sistem pencatatan semi-otomatis. Setiap perubahan konfigurasi dapat didokumentasikan secara langsung melalui perangkat lunak sederhana, seperti spreadsheet yang terintegrasi dengan alat pelaporan, sehingga memungkinkan tim jaringan untuk melacak semua perubahan yang dilakukan secara lebih efektif. Tim dapat secara berkala melakukan audit internal untuk memastikan kepatuhan terhadap prosedur dan regulasi.
+\end{itemize}
+
+\subsection{Keamanan Jaringan yang Rentan terhadap Kesalahan}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Pengelolaan manual juga membuka peluang untuk terjadinya kesalahan keamanan. Setiap perubahan konfigurasi jaringan yang tidak dikontrol dengan baik dapat menjadi celah bagi pihak yang tidak berwenang.
+
+    \item \textbf{To-Be (BPI):} Dalam skema BPI, PT. XYZ dapat meningkatkan keamanan jaringan dengan memperbaiki standar operasional prosedur (SOP) yang terkait dengan keamanan. Setiap perubahan yang berdampak pada keamanan jaringan harus melalui tinjauan keamanan yang ketat sebelum diterapkan. PT. XYZ juga dapat menggunakan alat manajemen keamanan yang sederhana, seperti alat monitoring log, untuk memeriksa adanya anomali dalam sistem dan segera menindaklanjutinya.
+\end{itemize}
+
+\section{Dampak Business Process Improvement (BPI) terhadap Efisiensi Operasional}
+
+\subsection{Efisiensi Waktu dan Biaya}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Saat ini, proses manual yang digunakan PT. XYZ menyebabkan waktu penyelesaian tugas yang lama dan biaya operasional yang tinggi, karena banyaknya tenaga kerja yang dibutuhkan untuk menyelesaikan tugas-tugas rutin.
+
+    \item \textbf{To-Be (BPI):} Dengan pendekatan BPI, PT. XYZ dapat mempercepat penyelesaian tugas-tugas rutin tanpa harus mengubah infrastruktur besar. Mengoptimalkan penggunaan alat dan proses yang ada akan memungkinkan tim menyelesaikan lebih banyak pekerjaan dalam waktu yang lebih singkat, sehingga mengurangi biaya operasional. Misalnya, menggunakan template konfigurasi atau mempercepat proses provisioning dapat mengurangi waktu pengerjaan secara signifikan.
+\end{itemize}
+
+\subsection{Peningkatan Skalabilitas Proses}
+
+\begin{itemize}
+    \item \textbf{As-Is:} Proses manual yang diterapkan saat ini sulit untuk diskalakan. Ketika jumlah perangkat yang harus dikelola meningkat, PT. XYZ harus menambah personel atau waktu kerja untuk mengatasi beban tambahan.
+
+    \item \textbf{To-Be (BPI):} BPI memungkinkan PT. XYZ untuk meningkatkan kapasitas mereka tanpa harus menambah banyak tenaga kerja. Dengan meningkatkan proses bisnis seperti konfigurasi dan monitoring menggunakan metode yang lebih efisien, tim jaringan dapat menangani lebih banyak perangkat tanpa penambahan sumber daya yang signifikan. Selain itu, tim dapat lebih fokus pada tugas-tugas strategis daripada tugas operasional harian.
+\end{itemize}
+
+\section{As-Is Versus To-Be BPR (Business Process Re-Engineering)}
+
+\section{Kondisi "As-Is"}
+Kondisi "as-is" menggambarkan proses bisnis PT. XYZ yang saat ini menggunakan metode manual, yang menyebabkan banyaknya waktu dan tenaga yang terbuang, serta tingginya risiko kesalahan manusia. Proses-proses inti yang membutuhkan peningkatan antara lain konfigurasi jaringan, monitoring, provisioning, troubleshooting, serta kolaborasi antar tim. Berikut adalah rincian kondisi "as-is" sebelum penerapan BPR:
+
+\subsection{Proses Konfigurasi Jaringan Manual}
+\begin{itemize}
+    \item \textbf{As-Is:} Proses konfigurasi jaringan dilakukan secara manual. Setiap perangkat harus dikonfigurasi satu per satu oleh tim jaringan, yang memakan waktu dan meningkatkan risiko kesalahan manusia. Proses ini sangat tidak efisien ketika harus diterapkan pada ratusan perangkat, dan tidak ada cara otomatis untuk menerapkan perubahan konfigurasi pada skala besar.
+    
+    \item \textbf{To-Be (BPR):} Dalam sistem "to-be" setelah penerapan BPR, proses konfigurasi jaringan akan sepenuhnya diotomatiskan melalui teknologi network automation. Dengan menggunakan dashboard terpusat, konfigurasi jaringan akan diterapkan secara serentak pada semua perangkat. Teknologi seperti Software-Defined Networking (SDN) dan Network Function Virtualization (NFV) akan memungkinkan perubahan konfigurasi dilakukan dengan cepat dan tanpa intervensi manual.
+\end{itemize}
+
+\subsection{Monitoring Jaringan Manual}
+\begin{itemize}
+    \item \textbf{As-Is:} Saat ini, monitoring jaringan dilakukan dua kali sehari secara manual oleh tim jaringan. Proses ini lambat, tidak real-time, dan sering kali deteksi masalah terjadi terlambat, sehingga troubleshooting lebih reaktif daripada proaktif.
+    
+    \item \textbf{To-Be (BPR):} Setelah penerapan BPR, monitoring jaringan akan diubah secara fundamental dengan penerapan teknologi monitoring berbasis AI dan Machine Learning (ML). Sistem monitoring baru akan bekerja 24/7 secara real-time, menganalisis dan memprediksi masalah potensial sebelum terjadi.
+\end{itemize}
+
+\subsection{Provisioning Perangkat Manual}
+\begin{itemize}
+    \item \textbf{As-Is:} Proses provisioning perangkat baru memerlukan waktu 2-3 hari. Setiap perangkat harus diatur secara manual oleh tim, yang membutuhkan banyak waktu, terutama jika banyak perangkat yang harus ditambahkan sekaligus.
+    
+    \item \textbf{To-Be (BPR):} Dalam sistem "to-be" hasil dari BPR, provisioning perangkat akan diotomatiskan menggunakan Zero-Touch Provisioning (ZTP). Setiap perangkat baru yang terhubung ke jaringan akan secara otomatis dikonfigurasi tanpa perlu intervensi manual.
+\end{itemize}
+
+\subsection{Troubleshooting Manual}
+\begin{itemize}
+    \item \textbf{As-Is:} Troubleshooting saat ini dilakukan secara manual, yang berarti tim sering kali bereaksi terhadap masalah setelah gangguan terjadi. Ini memperlambat penyelesaian masalah dan meningkatkan waktu downtime jaringan.
+    
+    \item \textbf{To-Be (BPR):} Dengan BPR, sistem troubleshooting akan sepenuhnya diotomatisasi melalui penerapan AI-powered Troubleshooting Systems. Sistem ini akan secara otomatis mendeteksi, menganalisis, dan memperbaiki masalah jaringan tanpa memerlukan intervensi manusia.
+\end{itemize}
+
+\subsection{Risiko Human Error}
+\begin{itemize}
+    \item \textbf{As-Is:} Karena sebagian besar proses dilakukan secara manual, risiko human error sangat tinggi. Kesalahan konfigurasi atau monitoring dapat menyebabkan masalah serius dalam jaringan dan mempengaruhi kinerja keseluruhan.
+    
+    \item \textbf{To-Be (BPR):} Risiko human error akan diminimalkan secara signifikan setelah penerapan BPR. Dengan mengotomatiskan sebagian besar tugas, proses kritis seperti konfigurasi, monitoring, dan provisioning akan dilakukan oleh sistem otomatis yang terprogram secara akurat.
+\end{itemize}
+
+\section{Kolaborasi Antar Tim}
+
+\subsection{Silo dalam Kolaborasi Antar Tim}
+\begin{itemize}
+    \item \textbf{As-Is:} Kolaborasi antara tim jaringan dan tim aplikasi sering kali terhambat oleh proses manual yang memakan waktu. Ketika aplikasi berubah, jaringan harus dikonfigurasi ulang secara manual oleh tim jaringan, yang memperlambat aliran kerja.
+    
+    \item \textbf{To-Be (BPR):} Dalam sistem "to-be" setelah BPR, kolaborasi antar tim akan dioptimalkan dengan menggunakan DevOps principles. Jaringan akan terintegrasi secara otomatis dengan aplikasi melalui platform manajemen terpusat yang memungkinkan perubahan di sisi aplikasi dapat secara otomatis menyesuaikan konfigurasi jaringan.
+\end{itemize}
+
+\section{Pengawasan dan Keamanan}
+
+\subsection{Kurangnya Pengawasan Otomatis}
+\begin{itemize}
+    \item \textbf{As-Is:} Saat ini, pengawasan terhadap perubahan konfigurasi jaringan dilakukan secara manual, yang membuat proses audit sulit dan tidak efisien. Pengawasan ini juga tidak real-time, sehingga ada risiko keamanan yang lebih tinggi.
+    
+    \item \textbf{To-Be (BPR):} Setelah penerapan BPR, pengawasan jaringan akan sepenuhnya diotomatisasi melalui Security Information and Event Management (SIEM) dan automated auditing systems. Sistem ini akan mencatat semua perubahan yang terjadi dalam jaringan secara real-time, memastikan bahwa setiap perubahan dapat diaudit dan dilacak.
+\end{itemize}
+
+\subsection{Keamanan Jaringan yang Rentan}
+\begin{itemize}
+    \item \textbf{As-Is:} Proses manual saat ini membuka peluang besar untuk terjadinya kesalahan konfigurasi yang dapat menjadi celah keamanan. Sistem yang tidak sepenuhnya diawasi juga rentan terhadap serangan dari pihak luar.
+    
+    \item \textbf{To-Be (BPR):} Dalam sistem "to-be", keamanan jaringan akan ditingkatkan secara drastis melalui automated security protocols. Teknologi seperti automated threat detection dan AI-based intrusion prevention systems akan diintegrasikan ke dalam jaringan untuk mendeteksi dan mencegah serangan sebelum mereka dapat merusak jaringan.
+\end{itemize}
+
+\section{Dampak Business Process Reengineering (BPR) terhadap Efisiensi Operasional}
+
+\subsection{Waktu dan Biaya}
+\begin{itemize}
+    \item \textbf{As-Is:} Proses manual saat ini menyebabkan biaya operasional yang tinggi karena membutuhkan banyak tenaga kerja dan waktu. Setiap tugas seperti konfigurasi, provisioning, dan monitoring memerlukan intervensi manusia yang ekstensif.
+    
+    \item \textbf{To-Be (BPR):} Dengan BPR, otomatisasi total akan mengurangi waktu penyelesaian tugas dari hari menjadi menit, yang akan menghemat biaya tenaga kerja dan meningkatkan produktivitas. Otomatisasi konfigurasi, provisioning, dan troubleshooting akan memungkinkan tim jaringan untuk fokus pada tugas strategis seperti perencanaan dan pengembangan infrastruktur, bukan pada tugas-tugas operasional sehari-hari.
+\end{itemize}
+
+\subsection{Efisiensi dan Skalabilitas}
+\begin{itemize}
+    \item \textbf{As-Is:} Proses manual saat ini sulit untuk diskalakan. Jika jaringan berkembang, jumlah perangkat meningkat, atau kebutuhan bisnis berubah, PT. XYZ harus menambah personel atau waktu untuk mengelola beban tambahan.
+    
+    \item \textbf{To-Be (BPR):} Setelah BPR, sistem akan dapat diskalakan tanpa memerlukan penambahan sumber daya manusia yang signifikan. Otomatisasi memungkinkan jaringan untuk tumbuh dan berkembang tanpa memperlambat proses operasional. Teknologi seperti \textit{cloud-based network management systems} akan memungkinkan pengelolaan jaringan dari berbagai lokasi geografis dengan fleksibilitas tinggi, sehingga PT. XYZ dapat memperluas operasionalnya tanpa hambatan.
 \end{itemize}
 
 
-%-----------------------------------------------------------------------------%
-\section{Memberikan Catatan}
-%-----------------------------------------------------------------------------%
-Ada dua perintah untuk memberikan catatan penulisan dalam dokumen yang Anda 
-kerjakan, yaitu: 
-\begin{itemize}
-	\item \bslash todo \\
-		Contoh: \\ \todo{Contoh bentuk todo.}
-	\item \bslash todoCite \\ 
-		Contoh: \todoCite
-\end{itemize}
-
-
-%-----------------------------------------------------------------------------%
-\section{Menambah Isi Daftar Isi}
-%-----------------------------------------------------------------------------%
-Terkadang ada kebutuhan untuk memasukan kata-kata tertentu kedalam Daftar Isi. 
-Perintah \bslash addChapter dapat digunakan untuk judul bab dalam Daftar isi. 
-Contohnya dapat dilihat pada berkas thesis.tex.
-
-
-%-----------------------------------------------------------------------------%
-\section{Memasukan PDF}
-%-----------------------------------------------------------------------------%
-Untuk memasukan PDF dapat menggunakan perintah \bslash inpdf yang menerima satu 
-buah argumen. Argumen ini berisi nama berkas yang akan digabungkan dalam 
-laporan. PDF yang dimasukan degnan cara ini akan memiliki header dan footer 
-seperti pada halaman lainnya. 
-
-\inpdf{assets/pdfs/include}
-
-Cara lain untuk memasukan PDF adalah dengan menggunakan perintah \bslash putpdf 
-dengan satu argumen yang berisi nama berkas pdf. Berbeda dengan perintah 
-sebelumnya, PDF yang dimasukan dengan cara ini tidak akan memiliki footer atau 
-header seperti pada halaman lainnya. 
-
-\putpdf{assets/pdfs/include}
-
-
-%-----------------------------------------------------------------------------%
-\section{Membuat Perintah Baru}
-%-----------------------------------------------------------------------------%
-Ada dua perintah yang dapat digunakan untuk membuat perintah baru, yaitu: 
-\begin{itemize}
-	\item \bslash Var \\
-		Digunakan untuk membuat perintah baru, namun setiap kata yang diberikan
-		akan diproses dahulu menjadi huruf kapital. 
-		Contoh jika perintahnya adalah \bslash Var\{adalah\} makan ketika 
-		perintah \bslash Var dipanggil, yang akan muncul adalah ADALAH. 
-	\item \bslash var \\
-		Digunakan untuk membuat perintah atau baru. 
-\end{itemize}
 

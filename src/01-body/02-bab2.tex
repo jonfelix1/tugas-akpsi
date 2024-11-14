@@ -1,208 +1,488 @@
 %-----------------------------------------------------------------------------%
 \chapter{\babDua}
 %-----------------------------------------------------------------------------%
-\todo{tambahkan kata-kata pengantar bab 2 disini}
+% \todo{tambahkan kata-kata pengantar bab 2 disini}
 
-%-----------------------------------------------------------------------------%
-\section{\latex~Secara Singkat}
-%-----------------------------------------------------------------------------%
-Definisi dari LaTeX \citep{lankton2008introduction} adalah: \\ 
-\begin{tabular}{| p{13cm} |}
-	\hline 
-	\\
-	LaTeX is a family of programs designed to produce publication-quality 
-	typeset documents. It is particularly strong when working with 
-	mathematical symbols. \\	
-	The history of LaTeX begins with a program called TEX. In 1978, a 
-	computer scientist by the name of Donald Knuth grew frustrated with the 
-	mistakes that his publishers made in typesetting his work. He decided 
-	to create a typesetting program that everyone could easily use to 
-	typeset documents, particularly those that include formulae, and made 
-	it freely available. The result is TEX. \\	
-	Knuth's product is an immensely powerful program, but one that does 
-	focus very much on small details. A mathematician and computer 
-	scientist by the name of Leslie Lamport wrote a variant of TEX called 
-	LaTeX that focuses on document structure rather than such details. \\
-	\\
-	\hline
-\end{tabular}
+% %-----------------------------------------------------------------------------%
+% \section{\latex~Secara Singkat}
+% %-----------------------------------------------------------------------------%
+% Definisi dari LaTeX \citep{lankton2008introduction} adalah: \\ 
+% \begin{tabular}{| p{13cm} |}
+% 	\hline 
+% 	\\
+% 	LaTeX is a family of programs designed to produce publication-quality 
+% 	typeset documents. It is particularly strong when working with 
+% 	mathematical symbols. \\	
+% 	The history of LaTeX begins with a program called TEX. In 1978, a 
+% 	computer scientist by the name of Donald Knuth grew frustrated with the 
+% 	mistakes that his publishers made in typesetting his work. He decided 
+% 	to create a typesetting program that everyone could easily use to 
+% 	typeset documents, particularly those that include formulae, and made 
+% 	it freely available. The result is TEX. \\	
+% 	Knuth's product is an immensely powerful program, but one that does 
+% 	focus very much on small details. A mathematician and computer 
+% 	scientist by the name of Leslie Lamport wrote a variant of TEX called 
+% 	LaTeX that focuses on document structure rather than such details. \\
+% 	\\
+% 	\hline
+% \end{tabular}
 
-\vspace*{0.8cm}
+% \vspace*{0.8cm}
 
-Contoh sitasi lainnya menggunakan \verb|\citep| adalah saat kita mau mensitasi pekerjaan tentang \textit{machine learning} \citep{chin2000learning} dan \textit{dynamic programming} \citep{barto1995learning}. \\
+% Contoh sitasi lainnya menggunakan \verb|\citep| adalah saat kita mau mensitasi pekerjaan tentang \textit{machine learning} \citep{chin2000learning} dan \textit{dynamic programming} \citep{barto1995learning}. \\
 
-Dokumen \latex~sangat mudah, seperti halnya membuat dokumen teks biasa. Ada 
-beberapa perintah yang diawali dengan tanda '\bslash'. 
-Seperti perintah \bslash\bslash~yang digunakan untuk memberi baris baru. 
-Perintah tersebut juga sama dengan perintah \bslash newline. 
-Pada bagian ini akan sedikit dijelaskan cara manipulasi teks dan 
-perintah-perintah \latex~yang mungkin akan sering digunakan. 
-Jika ingin belajar hal-hal dasar mengenai \latex, silahkan kunjungi: 
+% Dokumen \latex~sangat mudah, seperti halnya membuat dokumen teks biasa. Ada 
+% beberapa perintah yang diawali dengan tanda '\bslash'. 
+% Seperti perintah \bslash\bslash~yang digunakan untuk memberi baris baru. 
+% Perintah tersebut juga sama dengan perintah \bslash newline. 
+% Pada bagian ini akan sedikit dijelaskan cara manipulasi teks dan 
+% perintah-perintah \latex~yang mungkin akan sering digunakan. 
+% Jika ingin belajar hal-hal dasar mengenai \latex, silahkan kunjungi: 
+
+% \begin{itemize}
+% 	\item \url{http://frodo.elon.edu/tutorial/tutorial/}, atau
+% 	\item \url{http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/}
+% \end{itemize}
+
+
+% %-----------------------------------------------------------------------------%
+% \section{\latex~Kompiler dan IDE}
+% %-----------------------------------------------------------------------------%
+% Agar dapat menggunakan \latex~(pada konteks hanya sebagai pengguna), Anda 
+% tidak perlu banyak tahu mengenai hal-hal didalamnya. 
+% Seperti halnya pembuatan dokumen secara visual (contohnya Open Office (OO) 
+% Writer), Anda dapat menggunakan \latex~dengan cara yang sama. 
+% Orang-orang yang menggunakan \latex~relatif lebih teliti dan terstruktur 
+% mengenai cara penulisan yang dia gunakan, \latex~memaksa Anda untuk seperti 
+% itu.  
+
+% Kembali pada bahasan utama, untuk mencoba \latex~Anda cukup mendownload 
+% kompiler dan IDE. Saya menyarankan menggunakan Texlive dan Texmaker. 
+% Texlive dapat didownload dari \url{http://www.tug.org/texlive/}. 
+% Sedangkan Texmaker dapat didownload dari 
+% \url{http://www.xm1math.net/texmaker/}. 
+% Untuk pertama kali, coba buka berkas thesis.tex dalam template yang Anda miliki 
+% pada Texmaker. 
+% Dokumen ini adalah dokumen utama. 
+% Tekan F6 (PDFLaTeX) dan Texmaker akan mengkompilasi berkas tersebut menjadi 
+% berkas PDF. 
+% Jika tidak bisa, pastikan Anda sudah menginstall Texlive. 
+% Buka berkas tersebut dengan menekan F7. 
+% Hasilnya adalah sebuah dokumen yang sama seperti dokumen yang Anda baca saat 
+% ini. 
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Bold, Italic, dan Underline}
+% %-----------------------------------------------------------------------------%
+% Hal pertama yang mungkin ditanyakan adalah bagaimana membuat huruf tercetak 
+% tebal, miring, atau memiliki garis bawah. 
+% Pada Texmaker, Anda bisa melakukan hal ini seperti halnya saat mengubah dokumen 
+% dengan OO Writer. 
+% Namun jika tetap masih tertarik dengan cara lain, ini dia: 
+
+% \begin{itemize}
+% 	\item \bo{Bold} \\
+% 		Gunakan perintah \bslash textbf$\lbrace\rbrace$ atau 
+% 		\bslash bo$\lbrace\rbrace$. 
+% 	\item \f{Italic} \\
+% 		Gunakan perintah \bslash textit$\lbrace\rbrace$ atau 
+% 		\bslash f$\lbrace\rbrace$. 
+% 	\item \underline{Underline} \\
+% 		Gunakan perintah \bslash underline$\lbrace\rbrace$.
+% 	\item $\overline{Overline}$ \\
+% 		Gunakan perintah \bslash overline. 
+% 	\item $^{superscript}$ \\
+% 		Gunakan perintah \bslash $\lbrace\rbrace$. 
+% 	\item $_{subscript}$ \\
+% 		Gunakan perintah \bslash \_$\lbrace\rbrace$. 
+% \end{itemize}
+
+% Perintah \bslash f dan \bslash bo hanya dapat digunakan jika package 
+% uithesis digunakan. 
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Memasukan Gambar}
+% %-----------------------------------------------------------------------------%
+% Setiap gambar dapat diberikan caption dan diberikan label. Label dapat 
+% digunakan untuk menunjuk gambar tertentu. 
+% Jika posisi gambar berubah, maka nomor gambar juga akan diubah secara 
+% otomatis. 
+% Begitu juga dengan seluruh referensi yang menunjuk pada gambar tersebut. 
+% Contoh sederhana adalah \pic~\ref{fig:testGambar}. 
+% Silahkan lihat code \latex~dengan nama bab2.tex untuk melihat kode lengkapnya. 
+% Harap diingat bahwa caption untuk gambar selalu terletak dibawah gambar. 
+
+% \begin{figure}
+% 	\centering
+% 	\includegraphics[width=0.50\textwidth]
+% 		{assets/pics/creative_common.png}
+% 	\caption{\license.}
+% 	\label{fig:testGambar}
+% \end{figure}
+
+
+% %-----------------------------------------------------------------------------%
+% \section{Membuat Tabel}
+% %-----------------------------------------------------------------------------%
+% Seperti pada gambar, tabel juga dapat diberi label dan caption. 
+% Caption pada tabel terletak pada bagian atas tabel. 
+% Contoh tabel sederhana dapat dilihat pada \tab~\ref{tab:tab1}.
+
+% \begin{table}
+% 	\centering
+% 	\caption{Contoh Tabel}
+% 	\label{tab:tab1}
+% 	\begin{tabular}{| l | c r |}
+% 		\hline
+% 		& kol 1 & kol 2 \\ 
+% 		\hline
+% 		baris 1 & 1 & 2 \\
+% 		baris 2 & 3 & 4 \\
+% 		baris 3 & 5 & 6 \\
+% 		jumlah  & 9 & 12 \\
+% 		\hline
+% 	\end{tabular}
+% \end{table}
+
+% Ada jenis tabel lain yang dapat dibuat dengan \latex~berikut 
+% beberapa diantaranya. 
+% Contoh-contoh ini bersumber dari 
+% \url{http://en.wikibooks.org/wiki/LaTeX/Tables}
+
+% \begin{table}
+% 	\centering
+% 	\caption{An Example of Rows Spanning Multiple Columns}
+% 	\label{row.spanning}
+% 	\begin{tabular}{|l|l|*{6}{c|}}
+%   		\hline % create horizontal line
+%   		No & Name & \multicolumn{3}{|c|}{Week 1} & \multicolumn{3}{|c|}{Week 2} \\
+%   		\cline{3-8} % create line from 3rd column till 8th column
+%   		& & A & B & C & A & B & C\\
+%   		\hline
+%   		1 & Lala & 1 & 2 & 3 & 4 & 5 & 6\\
+%   		2 & Lili & 1 & 2 & 3 & 4 & 5 & 6\\
+%   		3 & Lulu & 1 & 2 & 3 & 4 & 5 & 6\\
+%   		\hline
+% 	\end{tabular}
+% \end{table}
+
+% \begin{table}
+% 	\centering
+% 	\caption{An Example of Columns Spanning Multiple Rows}
+% 	\label{column.spanning}
+% 	\begin{tabular}{|l|c|l|}
+% 		\hline
+% 		Percobaan & Iterasi & Waktu \\
+% 		\hline
+% 		Pertama & 1 & 0.1 sec \\ \hline
+% 		\multirow{2}{*}{Kedua} & 1 & 0.1 sec \\
+%  		& 3 & 0.15 sec \\ 
+%  		\hline
+% 		\multirow{3}{*}{Ketiga} & 1 & 0.09 sec \\
+%  		& 2 & 0.16 sec \\
+%  		& 3 & 0.21 sec \\ 
+%  		\hline
+% 	\end{tabular}
+% \end{table}
+
+% \begin{table}
+% 	\centering
+% 	\caption{An Example of Spanning in Both Directions Simultaneously}
+% 	\label{mix.spanning}
+% 	\begin{tabular}{cc|c|c|c|c|}
+% 		\cline{3-6}
+% 		& & \multicolumn{4}{|c|}{Title} \\ \cline{3-6}
+% 		& & A & B & C & D \\ \hline
+% 		\multicolumn{1}{|c|}{\multirow{2}{*}{Type}} &
+% 		\multicolumn{1}{|c|}{X} & 1 & 2 & 3 & 4\\ \cline{2-6}
+% 		\multicolumn{1}{|c|}{}                        &
+% 		\multicolumn{1}{|c|}{Y} & 0.5 & 1.0 & 1.5 & 2.0\\ \cline{1-6}
+% 		\multicolumn{1}{|c|}{\multirow{2}{*}{Resource}} &
+% 		\multicolumn{1}{|c|}{I} & 10 & 20 & 30 & 40\\ \cline{2-6}
+% 		\multicolumn{1}{|c|}{}                        &
+% 		\multicolumn{1}{|c|}{J} & 5 & 10 & 15 & 20\\ \cline{1-6}
+% 	\end{tabular}
+% \end{table}
+
+
+\section{Technical Feasibility}
+
+Analisis Technical Feasibility mengevaluasi sejauh mana sistem Network Automation dapat dirancang, dikembangkan, dan diterapkan dalam organisasi. Dalam proses perancangan sistem informasi, kami mengidentifikasi kelayakan teknis untuk setiap alternatif berdasarkan empat aspek utama, yaitu familiaritas dengan area fungsional, familiaritas dengan teknologi, ukuran proyek, dan kompatibilitas.
+
+\subsection{Build from Scratch}
+
+\subsubsection{Familiaritas dengan Teknologi}
+
+\textbf{Risiko Sedang:} Dibutuhkan tim yang memiliki pengalaman frontend, backend, dan network engineers dalam perusahaan, familiaritas dengan network automation, protokol jaringan (misalnya, SSH, REST API), dan integrasi antara sistem frontend, backend, serta perangkat keras jaringan.
+
+Membuat dashboard interaktif menggunakan frontend library dan backend untuk mengelola perangkat jaringan menggunakan Python atau Node.js menuntut keahlian dalam beberapa domain, terutama di sisi backend yang berhubungan dengan konfigurasi network automation.
+
+\subsubsection{Ukuran Proyek}
+
+\textbf{Risiko Sedang:} Proyek ini melibatkan pengembangan frontend (UI dashboard), backend untuk menangani konfigurasi otomatis, dan pengelolaan infrastruktur untuk mendukung layanan 24/7.
+
+Dibutuhkan kerja sama antar tim pengembang dan network engineers untuk menyusun skrip konfigurasi, menjalankan pengujian, serta memastikan bahwa perangkat jaringan yang berbeda dapat dikonfigurasi melalui sistem otomatis ini.
+
+\subsubsection{Kompatibilitas}
+
+\textbf{Risiko Tinggi:} Sistem harus mampu menangani multi-vendor environments yang menggunakan protokol dan API berbeda, seperti Cisco, Juniper, dan Arista. Kompatibilitas dengan SDN dan NFV untuk integrasi yang lebih luas juga perlu dipertimbangkan.
+
+Ada risiko tinggi dalam memastikan integrasi tanpa hambatan antara sistem baru dan perangkat yang sudah ada, terutama jika ada perangkat legacy yang mungkin tidak mendukung otomasi modern.
+
+\subsubsection{Kebutuhan Infrastruktur}
+
+\textbf{Risiko Sedang:} Sistem membutuhkan infrastruktur yang selalu tersedia (high availability) untuk menangani volume konfigurasi yang tinggi dan tetap memiliki latency rendah. Infrastruktur yang baik akan memastikan skalabilitas, kinerja, dan ketersediaan.
+
+Namun, karena cloud computing (AWS, GCP, Azure) menawarkan infrastruktur yang dapat diskalakan dan andal, risiko dapat dikurangi.
+
+\subsubsection{Efisiensi Sumber Daya}
+
+\textbf{Risiko Sedang:} Sistem membutuhkan sumber daya manusia dari berbagai bidang (frontend, backend, network engineers) serta infrastruktur untuk mendukung banyak tugas konfigurasi secara paralel.
+
+Penggunaan otomatisasi akan sangat membantu dalam mengurangi beban kerja manual dan meningkatkan efisiensi.
+
+
+\subsection{Technical Feasibility: Menggunakan Platform Infrastructure as Code}
+
+Implementasi tugas menggunakan konsep Infrastructure as Code (IaC) untuk mengotomatisasi pengelolaan infrastruktur dan konfigurasi sistem sangat layak secara teknis. Berikut adalah analisis Technical Feasibility yang lebih umum dengan menggunakan Ansible:
+
+\subsubsection{Familiaritas dengan Teknologi}
+
+\textbf{Risiko Rendah:} Ansible banyak digunakan untuk otomasi jaringan dan manajemen konfigurasi, sehingga menjadi pilihan yang tepat. Tim IT yang sudah terbiasa dengan sistem berbasis Linux dan sintaks YAML seharusnya tidak mengalami kesulitan dalam mengadopsinya. Ansible terkenal dengan bahasanya yang sederhana dan deklaratif untuk mengelola infrastruktur, sehingga mengurangi kebutuhan akan keterampilan pemrograman yang kompleks.
+
+\subsubsection{Ukuran Proyek}
+
+\textbf{Risiko Sedang:} Jika ruang lingkup proyek mencakup pengelolaan banyak perangkat, Ansible dapat diskalakan dengan baik saat melakukan orkestrasi konfigurasi di banyak host menggunakan Ansible Tower atau AWX untuk infrastruktur yang lebih besar. Namun, pengujian ekstensif dan pengembangan role mungkin diperlukan saat ukuran proyek meningkat. Rencana proyek harus mencakup playbook yang terdefinisi dengan baik untuk mengelola perangkat.
+
+\subsubsection{Kompatibilitas}
+
+\textbf{Risiko Sedang:} Ansible mendukung berbagai perangkat jaringan dan lingkungan multi-vendor (seperti Cisco, Juniper, Arista), sehingga integrasi tidak menjadi masalah besar. Namun, jika ada sistem lama yang tidak mendukung protokol otomasi, modul atau playbook khusus mungkin perlu dikembangkan. Hal ini menambah kompleksitas, tetapi kemampuan Ansible untuk memperluas fungsionalitas dengan modul membuat tantangan ini dapat diatasi.
+
+\subsubsection{Kebutuhan Infrastruktur}
+
+\textbf{Risiko Rendah:} Ansible bekerja tanpa agen (agentless), yang berarti tidak memerlukan perangkat lunak yang diinstal pada perangkat yang dikelola, sehingga mengurangi kompleksitas dan overhead. Untuk tugas otomasi jaringan seperti manajemen konfigurasi, backup, dan deployment, Ansible hanya membutuhkan akses SSH atau API, sehingga kendala infrastruktur kemungkinan kecil terjadi.
+
+\subsubsection{Efisiensi Sumber Daya}
+
+\textbf{Risiko Sedang:} Arsitektur Ansible yang tanpa agen dan sifat idempoten (memastikan bahwa tugas yang sama dijalankan berulang kali menghasilkan hasil yang sama) meminimalkan kebutuhan intervensi manual, yang mengurangi kesalahan manusia — ini adalah salah satu kebutuhan utama dalam tugas Anda. Selain itu, penggunaan playbook memungkinkan replikasi tugas dengan mudah di banyak perangkat, meningkatkan efisiensi.
+
+\subsubsection{Manfaat Utama Menggunakan Ansible}
 
 \begin{itemize}
-	\item \url{http://frodo.elon.edu/tutorial/tutorial/}, atau
-	\item \url{http://www.maths.tcd.ie/~dwilkins/LaTeXPrimer/}
+    \item \textbf{Skalabilitas:} Seperti yang dijelaskan dalam bagian kebutuhan bisnis dari dokumen Anda. Ansible dapat menangani peningkatan perangkat jaringan dan konfigurasi secara efisien (Phillips, 2018).
+    \item \textbf{Pengurangan Kesalahan:} Mengotomatisasi tugas-tugas berulang menghilangkan kesalahan manusia selama konfigurasi.
+    \item \textbf{Kepatuhan \& Keamanan:} Kemampuan Ansible untuk membuat log dan menerapkan kepatuhan keamanan (seperti enkripsi dan kontrol akses berbasis peran) memenuhi standar keamanan organisasi.
+    \item \textbf{Dukungan Multi-vendor:} Ansible mendukung interoperabilitas dengan berbagai perangkat dan vendor, sehingga memenuhi kebutuhan lingkungan jaringan yang beragam (Debes, 2024).
+\end{itemize}
+
+Kelayakan teknis untuk mengimplementasikan tugas ini dengan Ansible sangat tinggi karena kemudahan integrasinya dengan sistem multi-vendor, skalabilitas, dan kemampuan untuk mengotomatisasi tugas berulang, sehingga mengurangi kesalahan dan meningkatkan efisiensi.
+
+
+\subsection{Technical Feasibility: Single Vendor – Cisco}
+
+\subsubsection{Familiaritas dengan Teknologi}
+
+\textbf{Risiko Sedang:} Cisco terkenal akan perangkat jaringan mereka yang juga banyak digunakan oleh perusahaan, institusi pendidikan, maupun pemerintah. Sebelumnya, perangkat jaringan Cisco juga telah digunakan dalam sistem jaringan. Dalam mengimplementasikan skenario ini, tim network engineer perlu mempelajari dashboard yang dimiliki Cisco, yaitu Cisco Catalyst Center, untuk konfigurasi dan automasi perangkat jaringan.
+
+\subsubsection{Ukuran Proyek}
+
+\textbf{Risiko Tinggi:} Proyek ini melibatkan penggantian seluruh perangkat jaringan, seperti router, switch, dan access point menjadi perangkat jaringan Cisco yang kompatibel dengan dashboard Cisco Catalyst Center. Saat ini terdapat kurang lebih 1000 perangkat jaringan yang digunakan, sehingga dibutuhkan waktu yang cukup lama atau tenaga kerja yang cukup banyak untuk mengganti seluruh perangkat jaringan tersebut. Selain itu, perlu dipertimbangkan apakah pihak klien bersedia dengan adanya downtime sistem jaringan dalam proses penggantian perangkat jaringan.
+
+\subsubsection{Kompatibilitas}
+
+\textbf{Risiko Rendah:} Penggantian seluruh perangkat jaringan menjadi perangkat yang kompatibel dengan dashboard Cisco Catalyst Center menghilangkan masalah perbedaan konfigurasi antara perangkat. Dashboard yang disediakan oleh vendor memudahkan konfigurasi maupun automasi terhadap perangkat jaringan yang dimiliki.
+
+\subsubsection{Kebutuhan Infrastruktur}
+
+\textbf{Risiko Tinggi:} Proyek ini melibatkan penggantian seluruh perangkat jaringan, seperti router, switch, dan access point menjadi perangkat jaringan Cisco yang kompatibel dengan dashboard Cisco Catalyst Center. Dengan kurang lebih 1000 perangkat jaringan yang digunakan, perlu disiapkan perangkat baru untuk menggantikan perangkat yang sudah ada.
+
+\subsubsection{Efisiensi Sumber Daya}
+
+\textbf{Risiko Sedang:} Akan dibutuhkan network engineer untuk melakukan penggantian perangkat-perangkat jaringan menjadi perangkat jaringan Cisco. Dashboard Cisco Catalyst Center akan menyatukan semua pengaturan konfigurasi, monitoring, serta automasi ke dalam satu dashboard, sehingga dapat membantu mengurangi beban kerja manual dan meningkatkan efisiensi.
+
+
+
+\section{Economic Feasibility}
+
+\todo{fill this}
+
+\subsection{Indikasi Benefit}
+
+\todo{fill this}
+
+\subsection{Development Cost}
+\todo{fill this}
+
+\subsection{Operational Cost}
+\todo{fill this}
+
+\subsection{Cost Benefit Analysis}
+\todo{fill this}
+
+\section{Organizational Feasibility}
+
+\subsection{Project Champions}
+
+\subsubsection{IT Operations/Infrastructure Manager}
+\textbf{Peran}: Mengelola operasional harian dari infrastruktur jaringan. Memiliki pemahaman mendalam tentang tantangan operasional saat ini dan manfaat yang bisa dihasilkan dari otomasi. \\
+\textbf{Dukungan}: Mempromosikan otomatisasi sebagai alat untuk meningkatkan efisiensi, mengurangi downtime, dan mempercepat proses perubahan konfigurasi jaringan.
+
+\subsubsection{Network Administrator}
+\textbf{Peran}: Orang-orang yang akan bekerja langsung dengan solusi network automation. Mereka perlu memahami dan mendukung perubahan otomatisasi dalam proses sehari-hari. \\
+\textbf{Dukungan}: Mengadopsi dan mengembangkan keterampilan dalam mengelola jaringan otomatis serta berperan dalam pelatihan dan penyebaran solusi ke tim yang lebih luas.
+
+\subsubsection{Security Engineer}
+\textbf{Peran}: Bertanggung jawab atas keamanan jaringan. Mereka perlu memastikan bahwa solusi otomatisasi yang diterapkan tetap memperhatikan aspek keamanan, seperti firewall, segmentasi jaringan, dan perlindungan dari ancaman. \\
+\textbf{Dukungan}: Mendukung otomatisasi untuk meningkatkan keamanan jaringan melalui otomatisasi respon terhadap ancaman dan kebijakan keamanan yang lebih cepat.
+
+\subsubsection{Vendor/Third-Party Consultant}
+\textbf{Peran}: Pihak eksternal yang mungkin memiliki keahlian dalam alat network automation. Mereka bisa menjadi champion dengan berbagi pengalaman dari proyek lain dan membantu dalam merancang solusi yang tepat. \\
+\textbf{Dukungan}: Memberikan wawasan teknis dan memastikan bahwa alat dan teknologi yang diimplementasikan sesuai dengan kebutuhan dan standar industri.
+
+\subsection{Senior Management}
+
+\subsubsection{Chief Technology Officer (CTO)}
+\textbf{Peran}: CTO fokus pada pengembangan dan pemanfaatan teknologi untuk mendukung tujuan organisasi. Dalam proyek network automation, CTO akan mengawasi penerapan teknologi baru dan inovatif yang mendukung efisiensi dan pertumbuhan jaringan. \\
+\textbf{Tanggung Jawab}:
+\begin{itemize}
+    \item Memastikan bahwa solusi network automation yang dipilih adalah yang terbaik secara teknologi untuk organisasi.
+    \item Mengembangkan peta jalan teknologi untuk implementasi otomatisasi jaringan.
+    \item Mengidentifikasi peluang inovasi dalam jaringan yang otomatis dan aman.
+\end{itemize}
+
+\subsubsection{Chief Security Officer (CSO)}
+\textbf{Peran}: CSO bertanggung jawab untuk memastikan keamanan jaringan perusahaan. Pada proyek network automation, CSO akan fokus pada menjaga integritas dan keamanan jaringan yang diotomatisasi. \\
+\textbf{Tanggung Jawab}:
+\begin{itemize}
+    \item Mengawasi bahwa solusi otomasi yang dipilih memiliki kontrol keamanan yang ketat.
+    \item Mengidentifikasi dan memitigasi risiko keamanan yang mungkin timbul dengan mengotomatisasi konfigurasi dan pengelolaan jaringan.
+    \item Bekerja sama dengan tim jaringan untuk mengintegrasikan solusi keamanan dalam otomatisasi jaringan.
+\end{itemize}
+
+\subsubsection{Chief Financial Officer (CFO)}
+\textbf{Peran}: CFO bertanggung jawab atas pengelolaan keuangan perusahaan. Dalam proyek network automation, CFO akan menilai biaya, keuntungan, dan potensi penghematan yang dapat diperoleh dari otomasi jaringan. \\
+\textbf{Tanggung Jawab}:
+\begin{itemize}
+    \item Menilai anggaran dan memberikan pembiayaan untuk proyek.
+    \item Memastikan bahwa proyek network automation menghasilkan Return on Investment (ROI) yang positif.
+    \item Memantau dan mengevaluasi efisiensi biaya yang dihasilkan dari proyek otomatisasi.
+\end{itemize}
+
+\subsection{Users}
+
+\subsubsection{Network Engineers}
+\textbf{Peran}: Network Engineers adalah pengguna utama dari sistem network automation. Mereka bertanggung jawab atas pengelolaan dan pemeliharaan infrastruktur jaringan. \\
+\textbf{Tugas dan Keterlibatan}:
+\begin{itemize}
+    \item Menggunakan alat otomasi untuk mengelola konfigurasi jaringan, memperbaiki masalah, dan melakukan pemeliharaan secara otomatis.
+    \item Mengawasi performa jaringan dan mengambil tindakan otomatis atau manual saat terjadi gangguan.
+    \item Membantu dalam pengujian, pelatihan, dan peluncuran sistem network automation.
+\end{itemize}
+
+\subsubsection{System Administrators}
+\textbf{Peran}: Mereka mengelola sistem yang mendukung jaringan, seperti server, database, dan aplikasi yang berjalan di atas jaringan. \\
+\textbf{Tugas dan Keterlibatan}:
+\begin{itemize}
+    \item Bekerja dengan network automation untuk memastikan integrasi yang lancar antara jaringan dan sistem lainnya.
+    \item Memantau dan memelihara sistem otomasi untuk memastikan jaringan dan sistem bekerja secara sinkron.
+    \item Menggunakan alat network automation untuk melakukan provisioning otomatis pada server dan sumber daya IT lainnya.
 \end{itemize}
 
 
-%-----------------------------------------------------------------------------%
-\section{\latex~Kompiler dan IDE}
-%-----------------------------------------------------------------------------%
-Agar dapat menggunakan \latex~(pada konteks hanya sebagai pengguna), Anda 
-tidak perlu banyak tahu mengenai hal-hal didalamnya. 
-Seperti halnya pembuatan dokumen secara visual (contohnya Open Office (OO) 
-Writer), Anda dapat menggunakan \latex~dengan cara yang sama. 
-Orang-orang yang menggunakan \latex~relatif lebih teliti dan terstruktur 
-mengenai cara penulisan yang dia gunakan, \latex~memaksa Anda untuk seperti 
-itu.  
+\section{Organizational Feasibility}
 
-Kembali pada bahasan utama, untuk mencoba \latex~Anda cukup mendownload 
-kompiler dan IDE. Saya menyarankan menggunakan Texlive dan Texmaker. 
-Texlive dapat didownload dari \url{http://www.tug.org/texlive/}. 
-Sedangkan Texmaker dapat didownload dari 
-\url{http://www.xm1math.net/texmaker/}. 
-Untuk pertama kali, coba buka berkas thesis.tex dalam template yang Anda miliki 
-pada Texmaker. 
-Dokumen ini adalah dokumen utama. 
-Tekan F6 (PDFLaTeX) dan Texmaker akan mengkompilasi berkas tersebut menjadi 
-berkas PDF. 
-Jika tidak bisa, pastikan Anda sudah menginstall Texlive. 
-Buka berkas tersebut dengan menekan F7. 
-Hasilnya adalah sebuah dokumen yang sama seperti dokumen yang Anda baca saat 
-ini. 
+\subsection{Project Champions}
 
+\subsubsection{Security Engineer}
 
-%-----------------------------------------------------------------------------%
-\section{Bold, Italic, dan Underline}
-%-----------------------------------------------------------------------------%
-Hal pertama yang mungkin ditanyakan adalah bagaimana membuat huruf tercetak 
-tebal, miring, atau memiliki garis bawah. 
-Pada Texmaker, Anda bisa melakukan hal ini seperti halnya saat mengubah dokumen 
-dengan OO Writer. 
-Namun jika tetap masih tertarik dengan cara lain, ini dia: 
+\textbf{Peran:} Bertanggung jawab atas keamanan jaringan. Mereka perlu memastikan bahwa solusi otomatisasi yang diterapkan tetap memperhatikan aspek keamanan, seperti firewall, segmentasi jaringan, dan perlindungan dari ancaman.
 
+\textbf{Dukungan:} Mendukung otomatisasi untuk meningkatkan keamanan jaringan melalui otomatisasi respon terhadap ancaman dan kebijakan keamanan yang lebih cepat.
+
+\subsubsection{Vendor/Third-Party Consultant}
+
+\textbf{Peran:} Pihak eksternal yang mungkin memiliki keahlian dalam alat network automation. Mereka bisa menjadi champion dengan berbagi pengalaman dari proyek lain dan membantu dalam merancang solusi yang tepat.
+
+\textbf{Dukungan:} Memberikan wawasan teknis dan memastikan bahwa alat dan teknologi yang diimplementasikan sesuai dengan kebutuhan dan standar industri.
+
+\subsection{Senior Management}
+
+\subsubsection{Chief Technology Officer (CTO)}
+
+\textbf{Peran:} CTO fokus pada pengembangan dan pemanfaatan teknologi untuk mendukung tujuan organisasi. Dalam proyek network automation, CTO akan mengawasi penerapan teknologi baru dan inovatif yang mendukung efisiensi dan pertumbuhan jaringan.
+
+\textbf{Tanggung Jawab:}
 \begin{itemize}
-	\item \bo{Bold} \\
-		Gunakan perintah \bslash textbf$\lbrace\rbrace$ atau 
-		\bslash bo$\lbrace\rbrace$. 
-	\item \f{Italic} \\
-		Gunakan perintah \bslash textit$\lbrace\rbrace$ atau 
-		\bslash f$\lbrace\rbrace$. 
-	\item \underline{Underline} \\
-		Gunakan perintah \bslash underline$\lbrace\rbrace$.
-	\item $\overline{Overline}$ \\
-		Gunakan perintah \bslash overline. 
-	\item $^{superscript}$ \\
-		Gunakan perintah \bslash $\lbrace\rbrace$. 
-	\item $_{subscript}$ \\
-		Gunakan perintah \bslash \_$\lbrace\rbrace$. 
+    \item Memastikan bahwa solusi network automation yang dipilih adalah yang terbaik secara teknologi untuk organisasi.
+    \item Mengembangkan peta jalan teknologi untuk implementasi otomatisasi jaringan.
+    \item Mengidentifikasi peluang inovasi dalam jaringan yang otomatis dan aman.
 \end{itemize}
 
-Perintah \bslash f dan \bslash bo hanya dapat digunakan jika package 
-uithesis digunakan. 
+\subsubsection{Chief Security Officer (CSO)}
+
+\textbf{Peran:} CSO bertanggung jawab untuk memastikan keamanan jaringan perusahaan. Pada proyek network automation, CSO akan fokus pada menjaga integritas dan keamanan jaringan yang diotomatisasi.
+
+\textbf{Tanggung Jawab:}
+\begin{itemize}
+    \item Mengawasi bahwa solusi otomasi yang dipilih memiliki kontrol keamanan yang ketat.
+    \item Mengidentifikasi dan memitigasi risiko keamanan yang mungkin timbul dengan mengotomatisasi konfigurasi dan pengelolaan jaringan.
+    \item Bekerja sama dengan tim jaringan untuk mengintegrasikan solusi keamanan dalam otomatisasi jaringan.
+\end{itemize}
+
+\subsection{Users}
+
+\subsubsection{Network Engineers}
+
+\textbf{Peran:} Network Engineers adalah pengguna utama dari sistem network automation. Mereka bertanggung jawab atas pengelolaan dan pemeliharaan infrastruktur jaringan.
+
+\textbf{Tugas dan Keterlibatan:}
+\begin{itemize}
+    \item Menggunakan alat otomasi untuk mengelola konfigurasi jaringan, memperbaiki masalah, dan melakukan pemeliharaan secara otomatis.
+    \item Mengawasi performa jaringan dan mengambil tindakan otomatis atau manual saat terjadi gangguan.
+    \item Membantu dalam pengujian, pelatihan, dan peluncuran sistem network automation.
+\end{itemize}
+
+\subsubsection{System Administrators}
+
+\textbf{Peran:} Mereka mengelola sistem yang mendukung jaringan, seperti server, database, dan aplikasi yang berjalan di atas jaringan.
+
+\textbf{Tugas dan Keterlibatan:}
+\begin{itemize}
+    \item Bekerja dengan network automation untuk memastikan integrasi yang lancar antara jaringan dan sistem lainnya.
+    \item Memantau dan memelihara sistem otomasi untuk memastikan jaringan dan sistem bekerja secara sinkron.
+    \item Menggunakan alat network automation untuk melakukan provisioning otomatis pada server dan sumber daya IT lainnya.
+\end{itemize}
+
+\subsubsection{Security Engineers}
+
+\textbf{Peran:} Security Engineers bertugas untuk menjaga keamanan jaringan, termasuk memastikan bahwa solusi network automation berjalan dengan aman.
+
+\textbf{Tugas dan Keterlibatan:}
+\begin{itemize}
+    \item Mengotomatisasi pemantauan ancaman jaringan dan respons terhadap insiden keamanan.
+    \item Menyebarkan kebijakan keamanan jaringan secara otomatis di seluruh perangkat jaringan.
+    \item Memastikan bahwa otomatisasi tidak menimbulkan celah keamanan baru, seperti kesalahan konfigurasi.
+\end{itemize}
+
+\subsubsection{Application Developers}
+
+\textbf{Peran:} Meskipun secara tidak langsung terlibat dalam pengelolaan jaringan, pengembang aplikasi dapat memperoleh manfaat dari network automation yang mendukung aplikasi mereka.
+
+\textbf{Tugas dan Keterlibatan:}
+\begin{itemize}
+    \item Berkolaborasi dengan tim jaringan untuk memastikan bahwa infrastruktur jaringan yang otomatis mampu mendukung aplikasi secara optimal.
+    \item Memanfaatkan otomatisasi jaringan untuk mempercepat pengembangan dan pengujian aplikasi, terutama saat menggunakan lingkungan berbasis cloud.
+    \item Mengakses API dari alat network automation untuk menyesuaikan infrastruktur jaringan sesuai kebutuhan aplikasi.
+\end{itemize}
+
+\section{Summary of Proposed Feasibility Analysis}
+\todo{fill this, isi tabel komparasi 3 tabel}
 
 
-%-----------------------------------------------------------------------------%
-\section{Memasukan Gambar}
-%-----------------------------------------------------------------------------%
-Setiap gambar dapat diberikan caption dan diberikan label. Label dapat 
-digunakan untuk menunjuk gambar tertentu. 
-Jika posisi gambar berubah, maka nomor gambar juga akan diubah secara 
-otomatis. 
-Begitu juga dengan seluruh referensi yang menunjuk pada gambar tersebut. 
-Contoh sederhana adalah \pic~\ref{fig:testGambar}. 
-Silahkan lihat code \latex~dengan nama bab2.tex untuk melihat kode lengkapnya. 
-Harap diingat bahwa caption untuk gambar selalu terletak dibawah gambar. 
-
-\begin{figure}
-	\centering
-	\includegraphics[width=0.50\textwidth]
-		{assets/pics/creative_common.png}
-	\caption{\license.}
-	\label{fig:testGambar}
-\end{figure}
 
 
-%-----------------------------------------------------------------------------%
-\section{Membuat Tabel}
-%-----------------------------------------------------------------------------%
-Seperti pada gambar, tabel juga dapat diberi label dan caption. 
-Caption pada tabel terletak pada bagian atas tabel. 
-Contoh tabel sederhana dapat dilihat pada \tab~\ref{tab:tab1}.
 
-\begin{table}
-	\centering
-	\caption{Contoh Tabel}
-	\label{tab:tab1}
-	\begin{tabular}{| l | c r |}
-		\hline
-		& kol 1 & kol 2 \\ 
-		\hline
-		baris 1 & 1 & 2 \\
-		baris 2 & 3 & 4 \\
-		baris 3 & 5 & 6 \\
-		jumlah  & 9 & 12 \\
-		\hline
-	\end{tabular}
-\end{table}
 
-Ada jenis tabel lain yang dapat dibuat dengan \latex~berikut 
-beberapa diantaranya. 
-Contoh-contoh ini bersumber dari 
-\url{http://en.wikibooks.org/wiki/LaTeX/Tables}
-
-\begin{table}
-	\centering
-	\caption{An Example of Rows Spanning Multiple Columns}
-	\label{row.spanning}
-	\begin{tabular}{|l|l|*{6}{c|}}
-  		\hline % create horizontal line
-  		No & Name & \multicolumn{3}{|c|}{Week 1} & \multicolumn{3}{|c|}{Week 2} \\
-  		\cline{3-8} % create line from 3rd column till 8th column
-  		& & A & B & C & A & B & C\\
-  		\hline
-  		1 & Lala & 1 & 2 & 3 & 4 & 5 & 6\\
-  		2 & Lili & 1 & 2 & 3 & 4 & 5 & 6\\
-  		3 & Lulu & 1 & 2 & 3 & 4 & 5 & 6\\
-  		\hline
-	\end{tabular}
-\end{table}
-
-\begin{table}
-	\centering
-	\caption{An Example of Columns Spanning Multiple Rows}
-	\label{column.spanning}
-	\begin{tabular}{|l|c|l|}
-		\hline
-		Percobaan & Iterasi & Waktu \\
-		\hline
-		Pertama & 1 & 0.1 sec \\ \hline
-		\multirow{2}{*}{Kedua} & 1 & 0.1 sec \\
- 		& 3 & 0.15 sec \\ 
- 		\hline
-		\multirow{3}{*}{Ketiga} & 1 & 0.09 sec \\
- 		& 2 & 0.16 sec \\
- 		& 3 & 0.21 sec \\ 
- 		\hline
-	\end{tabular}
-\end{table}
-
-\begin{table}
-	\centering
-	\caption{An Example of Spanning in Both Directions Simultaneously}
-	\label{mix.spanning}
-	\begin{tabular}{cc|c|c|c|c|}
-		\cline{3-6}
-		& & \multicolumn{4}{|c|}{Title} \\ \cline{3-6}
-		& & A & B & C & D \\ \hline
-		\multicolumn{1}{|c|}{\multirow{2}{*}{Type}} &
-		\multicolumn{1}{|c|}{X} & 1 & 2 & 3 & 4\\ \cline{2-6}
-		\multicolumn{1}{|c|}{}                        &
-		\multicolumn{1}{|c|}{Y} & 0.5 & 1.0 & 1.5 & 2.0\\ \cline{1-6}
-		\multicolumn{1}{|c|}{\multirow{2}{*}{Resource}} &
-		\multicolumn{1}{|c|}{I} & 10 & 20 & 30 & 40\\ \cline{2-6}
-		\multicolumn{1}{|c|}{}                        &
-		\multicolumn{1}{|c|}{J} & 5 & 10 & 15 & 20\\ \cline{1-6}
-	\end{tabular}
-\end{table}
 
